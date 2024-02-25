@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDolist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>لیست کارها</h1>
+        <div class="insert-text">
+            <input type="text" placeholder="لطفا تسک های خود را وارید نماید!" autofocus>
+            <button onclick="_gettext(this)">+</button>
+        </div>
+        <section class="meesage">
+            <span>موفقانه ایجاد گردید</span>
+            <span>موفقانه حذف گردید</span>
+        </section>
+        <ul>
+            <li class="list">
+                <p>اعنوان تسک</p>
+                <span>✖</span>
+                <span>✔</span>
+            </li>
+        </ul>
+        <div class="todo-footer">
+            <p>شما تا حال <span id="count">0</span> تسک دارید</p>
+            <button onclick="_deleteAl(this)">پاک کردن همه</button>
+        </div>
+    </main>
+</body>
+    <script src="Js/maser.js"></script>
+</html>

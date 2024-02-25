@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style:none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color:darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:bzar;
+}
+main{
+    width: 450px;
+    min-height:470px;
+    background-color:#fff;
+    border-radius:5px;
+    padding:20px;
+    // box-shadow:0 0 10px 5px gray;
+    position: relative;
+    &::before{
+        content:'';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color:black;
+        position: absolute;
+        top:20px;left:20px;
+        z-index:-1;
+        transition:.2s;
+    }
+    &:hover::before{
+        top: 0;left: 0;
+    }
+    >h1{
+        text-align: center;
+        // border:1px solid gray;
+        text-shadow:0 0 10px gray,0 0 15px gray;
+    }
+    .insert-text{
+        width: 100%;
+        height: 55px;
+        // border:2px solid black;
+        display: flex;
+        justify-content: space-between;
+        margin:10px 0;
+        >*{
+            height: 100%;
+        }
+        >input{
+            width: 87%;
+            padding:0 15px;
+            font-size:15px;
+            border:none;
+            background-color:aquamarine;
+            &::placeholder{
+                font-family:bzar;
+                color:black;
+                font-size:15px;
+            }
+        }
+        >button{
+            width: 12%;
+            background-color:rgba(128, 0, 128, 0.708);
+            border:none;
+            font-size:30px;
+            color:#fff;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover{
+                background-color:purple;
+            }
+        }
+    }
+
+    .meesage{
+        width: 100%;
+        height: 30px;
+        // background-color:aquamarine;
+        text-align: center;
+        line-height:30px;
+        >span{
+            opacity: 0;
+            color:black;
+            font-size:20px;
+        }
+        >span:nth-of-type(1){
+              animation-duration:1s;
+              animation-timing-function: linear;
+              animation-fill-mode: forwards;  
+        }
+        @keyframes span0 {
+            0%{
+                opacity: 0;
+            }
+            40%{
+                opacity: 0;
+            }
+            41%{
+                opacity: 1;
+            }
+            99%{
+                opacity: 1;
+                transform: scale(1.2);
+                font-size:17px;
+            }
+            100%{
+                opacity: 0;
+                background-color:transparent;
+            }
+        }
+        >span:nth-of-type(2){
+            animation-duration:1s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+        @keyframes span1 {
+            0%{
+                opacity: 0;
+            }
+            99%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+    }
+
+
+
+    >ul{
+        width: 100%;
+        min-height:100px;
+        // background-color:red;
+        padding:10px 0;
+        >.list{
+            width: 100%;
+            height: 40px;
+            background-color: aquamarine;
+            margin:10px 0;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            line-height:40px;
+            padding-right:5px;
+            display: flex;
+            justify-content: space-between;
+            >span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:15%;
+                height:100%;
+                background-color:rgba(0, 0, 0, 0.549);
+                color:white;
+                cursor: pointer;
+                border-radius: 2px;
+            }
+            >p{
+                width: 67%;
+                height: 100%;
+                // background-color:red;
+                font-size:20px;
+            }
+        }
+    }
+
+
+    .todo-footer{
+        width: 100%;
+        height: 100px;
+        // background-color:aquamarine;
+        margin-top:100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        >button{
+            width: 130px;
+            padding:20px 0;
+            border:none;
+            background-color:purple;
+            color:#fff;
+            font-size:1rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.ok{
+    text-decoration:line-through;
+    color:red;
+}
+
+
+@font-face {
+    font-family:bzar;
+    src: url(fonts/bzar.ttf);
+}
